@@ -75,7 +75,6 @@ $(function () {
     var buttonNum = buttonClass.split('-')[1].split('')[3]
     var userInput = $(`${'#text-field-'+buttonNum}`).val();
     localStorage.setItem(`${"userInput"+buttonNum}`, userInput);
-    console.log(userInput);
   });
   
   //function to persist saved events
@@ -85,8 +84,6 @@ $(function () {
       var fieldNumber = localStorage.key(i).split('')[9];
 
       var value = localStorage.getItem(field);
-      
-      console.log(field);
       $(`${'#text-field-'+fieldNumber}`).val(value);
 
     }
