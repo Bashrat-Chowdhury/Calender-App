@@ -37,7 +37,7 @@ $(function () {
   // Display the formatted date in the HTML element
   $("#currentDay").text(formattedDate);
 
-
+  //Added class name according to the current hour 
   function setClass(currentHour) {
     if(currentHour === 9) {
       $("#hour-9").addClass("row time-block present");
@@ -69,6 +69,14 @@ $(function () {
 
   setClass(currentHour);
 
+  //logic for saving input to local storage 
+  $("button").click(function() {
+    var buttonClass = $(this).attr("id");
+    var buttonNum = buttonClass.split('-')[1].split('')[3]
+    var userInput = $(`${'#text-field-'+buttonNum}`).val();
+    localStorage.setItem(`${"userInput"+buttonNum}`, userInput);
+    console.log(userInput);
+  });
 
 });
 
