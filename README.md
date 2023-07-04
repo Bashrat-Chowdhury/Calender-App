@@ -15,12 +15,12 @@ N/A
 
 When the user first lands on the calender app, they will see the current date and day. Furthermore, the working hours displayed on the calender will be segregated based on the timeblock colour. The below image is for when the time is 11 AM:
 
-![LandingPage] (Assets/cal1.png)
+<img width="923" alt="cal1" src="https://github.com/Bashrat-Chowdhury/challenge5_calender/assets/133437739/b1b3d222-c26d-4639-9985-afa8f36478ab">
 
-The user can then input their notes which will persist through refreshes. 
 
-![StoredNotes] (Assets/cal2.png)
+The user can then input their notes which will persist through refreshes:
 
+<img width="933" alt="cal2" src="https://github.com/Bashrat-Chowdhury/challenge5_calender/assets/133437739/4ee275f5-68be-4680-b44b-e7fe24498554">
 
 ## Credits
 
