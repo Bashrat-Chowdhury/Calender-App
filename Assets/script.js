@@ -77,6 +77,22 @@ $(function () {
     localStorage.setItem(`${"userInput"+buttonNum}`, userInput);
     console.log(userInput);
   });
+  
+  //function to persist saved events
+  function setInitialValue() {
+    for (var i = 0; i < localStorage.length; i++) {
+      var field = localStorage.key(i);
+      var fieldNumber = localStorage.key(i).split('')[9];
+
+      var value = localStorage.getItem(field);
+      
+      console.log(field);
+      $(`${'#text-field-'+fieldNumber}`).val(value);
+
+    }
+  }
+
+  setInitialValue();
 
 });
 
