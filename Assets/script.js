@@ -38,7 +38,36 @@ $(function () {
   $("#currentDay").text(formattedDate);
 
 
+  function setClass(currentHour) {
+    if(currentHour === 9) {
+      $("#hour-9").addClass("row time-block present");
+    } else{
+      $("#hour-9").addClass("row time-block past");
+    } 
+  
+    if(currentHour === 17) {
 
+      $("#hour-17").addClass("row time-block present");
+    } else{
+      $("#hour-17").addClass("row time-block future");
+    } 
+
+    if(currentHour > 9 && currentHour < 17) {
+      $(`${'#hour-'+ (currentHour)}`).addClass("row time-block present");
+    }
+
+
+    for(var i = currentHour - 1; i > 9; i--){
+      $(`${'#hour-'+ (i)}`).addClass("row time-block past");
+    }
+
+    for(var i = currentHour + 1; i < 17; i++){
+      $(`${'#hour-'+ (i)}`).addClass("row time-block future");
+
+    }
+  }
+
+  setClass(currentHour);
 
 
 });
